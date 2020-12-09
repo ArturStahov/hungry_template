@@ -44,6 +44,56 @@ body {
   //     left 3%/5% $body-color;
 }
 
+.section-flex-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.section-image-decor {
+  width: 250px;
+  height: 250px;
+  border: 20px solid #e8c300;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  position: absolute;
+}
+
+.decor-section-line {
+  height: 100%;
+  width: 1px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+
+  &--left {
+    left: 294px;
+    bottom: 0;
+  }
+  &--right {
+    right: 294px;
+    bottom: 0;
+  }
+  &--center {
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  bottom: 0px;
+  padding: 0px;
+  word-spacing: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  opacity: 0;
+}
+
 .container {
   margin: 0 auto;
   @media screen and (max-width: $mobile-bp-max) {
